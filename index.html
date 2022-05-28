@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0">
+        <title>Juego del Ahorcado</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <h1 class="logo"><img src="imagenes/Logo.svg" alt="Logotipo de alura"></h1>
+        </header>
+
+        <main>
+            <section class="inicio">
+                <div class="contenedor-inicio">
+                    <div class="texto">
+                        <h1 class="titulo">El juego del ahorcado</h1>
+                    </div>
+                    <div class="botones-inicio">
+                        <button type="button" class="boton-iniciar">Iniciar juego</button>
+                        <button type="button" class="boton-addpalabra">Agregar palabra</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="agregarPalabra">
+                <div class="contenedor-addpalabra">
+                    <div class="entrada">
+                        <input type="text" name="agregar-palabra" placeholder="Ingrese una palabra" onkeyup="convertirMay(this)" class="addpalabra">
+                    </div>
+                    <div class="advertencia">
+                        <img class="signo" src="imagenes/Vector.png" alt="Signo de admiración">
+                        <p class="reglas" id="reglas">Máximo 15 letras, sin acentos y sin carácteres espaciales</p>
+                    </div>
+                    <div class="botones-addpalabra">
+                        <span class="aviso-invisible">La palabra excede el número de letras permitidas</span>
+                        <span class="aviso-palabra-invisible">Se agrego la palabra</span>
+                        <button type="button" class="botonGuardarEmpezar">Guardar y Empezar</button>
+                        <button type="button" class="botonCancelar">Cancelar</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="juego">
+                <div class="contenedor-canvas">
+                    <div class="sec-canvas">
+                        <canvas class="canvas" width="350px" height="400px"></canvas>
+                        <span class="ganaste">¡Ganaste! <br>Fin de la partida</span>
+                        <span class="perdiste">¡Perdiste! <br>Fin de la partida</span>
+                    </div>
+                    <div class="contenedor-letras"></div>
+                    <div class="letras-descartadas"></div>
+                    <div class="teclado">
+                        <div class="fila1"></div>
+                        <div class="fila2"></div>
+                        <div class="fila3"></div>
+                    </div>
+                    <div class="botones-juego">
+                        <button type="button" class="botonNuevojuego">Nuevo juego</button>
+                        <button type="button" class="botonDesistir">Desistir</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p class="pie-pagina"><a href="https://www.linkedin.com/in/samanta-abigail-chirinos-r%C3%ADos-2a220a188/">&copy Samanta Abigail Chirinos Ríos - 2022</a></p>
+        </footer>
+
+        <script src="js/inicio.js"></script>
+        <script src="js/ahorcado.js"></script>
+        <script src="js/agregarpalabra.js"></script>
+        <script src="js/validar.js"></script>
+    </body>
+</html>
