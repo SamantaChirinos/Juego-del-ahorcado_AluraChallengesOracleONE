@@ -36,7 +36,6 @@ botonGuardarEmpezar.addEventListener("click", function(event){
 
 botonCancelar.addEventListener("click", function(event){
     window.removeEventListener("keydown", validarTecla);
-    quitarEventosT();
     addPalabra.style.display = "none";
     juego.style.display = "none";
     inicio.style.display = "";
